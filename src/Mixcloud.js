@@ -26,7 +26,7 @@ constructor(props) {
 
    handleSubmit = (event) => {
     event.preventDefault();
-    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/`;
+    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/?limit=40`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({

@@ -24,7 +24,7 @@ constructor(props) {
 
    handleSubmit = (event) => {
     event.preventDefault();
-    const url = `https://api.mixcloud.com/NTSRadio/${this.state.term}/`;
+    const url = `https://api.mixcloud.com/NTSRadio/${this.state.term}/?limit=40`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
