@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-
+import './App.css';
 
 class Mixcloud extends Component{
 constructor(props) {
     super(props);
     this.state = {
       term: '',
-      html: "",
+      name: '',
+      playCount: null,
+      image: '',
+      listenerCount: null,
+      url: '',
+      shows: [],
+      tags: [],
+      genre: '',
+      list: '',
     };
   }
 
@@ -18,28 +26,55 @@ constructor(props) {
 
    handleSubmit = (event) => {
     event.preventDefault();
-    const url = `https://www.mixcloud.com/oembed/?url=https%3A%2F%2Fwww.mixcloud.com%2FNTSRADIO%2F${this.state.term}%2F&format=json`;
+    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         term: '',
-        embed: data.html,
+        name: data.name,
+        shows: data.data,
        }))
       .catch(e => console.log('error', e));
   }
+
+
+// list =  this.setObject.keys(tags).forEach(function(key) {
+//   console.log('Key : ' + key + ', Value : ' + tags[key])
+// })
+
 
   render() {
     return (
       <div className="App">
         <div className="Title">
-        Search Widget
+        Search Mixcloud
         </div>
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
           <button>Search User</button>
         </form>
         <div className="result">
-          {this.state.html}
+
+
+       {/*   tags: {this.state.tags.map(function(listValue){
+            return <li>{listValue}</li>;
+          })}*/}
+
+        {this.state.shows.map(function(show) {
+          return (
+            <div  className="job">
+
+
+              <a href={show.url}>
+              <img src={show.pictures.large}/>
+              <br/>
+                {show.name}
+                <br/>
+              </a>
+           {/*   {show.user.name}*/}
+            </div>
+          );
+        })}
         </div>
       </div>
     );

@@ -19,6 +19,16 @@
 }
 
 
+.result {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 25%);
+}
+
+.result>* {
+
+}
+
 .Title{
   font-size: 2em;
 }

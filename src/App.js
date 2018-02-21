@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Title">
+        {/*<div className="Title">
         Welcome to Memeland
         </div>
         <form onSubmit={this.handleSubmit}>
@@ -59,9 +59,9 @@ class App extends Component {
         <img src={this.state.img5} height="200"  />
         <img src={this.state.img6} height="200"  />
         <img src={this.state.img7} height="200"  />
-        <img src={this.state.img8} height="200"  />
-        <Youtube/>
-      {/*  <Mixcloud/>*/}
+        <img src={this.state.img8} height="200"  />*/}
+      {/*  <Youtube/>*/}
+        <Mixcloud/>
       </div>
     );
   }
