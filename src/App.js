@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Youtube from "./Youtube";
+import Mixcloud from "./Mixcloud";
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class App extends Component {
         <img src={this.state.img7} height="200"  />
         <img src={this.state.img8} height="200"  />
         <Youtube/>
+      {/*  <Mixcloud/>*/}
       </div>
     );
   }
