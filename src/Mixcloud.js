@@ -62,14 +62,14 @@ constructor(props) {
 
         {this.state.shows.map(function(show) {
           return (
-            <div  className="job">
+            <div  className="show">
 
 
               <a href={show.url}>
               <img src={show.pictures.large}/>
               <br/>
                 {show.name}
-                <br/>
+
               </a>
            {/*   {show.user.name}*/}
             </div>

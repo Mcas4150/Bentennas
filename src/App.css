@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: grey;
+}
+
+body{
+  background-color: grey;
 }
 
 .App-logo {
@@ -27,6 +32,16 @@
 
 .result>* {
 
+}
+
+a{
+  color: white;
+}
+
+.show{
+  border: 2px solid white;
+  padding: 5px;
+  background-color: black
 }
 
 .Title{
