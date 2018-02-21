@@ -23,6 +23,12 @@ body{
   font-size: 1.5em;
 }
 
+input{
+  background-color:black;
+  border: 2px solid white;
+  margin: 5px;
+  color: white;
+}
 
 .result {
   display: grid;
@@ -37,7 +43,7 @@ body{
 a{
   color: white;
   text-decoration-line: none;
-  font-size: .75em;
+  font-size: 1em;
 }
 
 .show{
