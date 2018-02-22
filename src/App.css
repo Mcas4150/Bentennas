@@ -20,7 +20,12 @@ button {
     margin: 0;
 }
 
-
+.result {
+  justify-content: center;
+  display: grid;
+  grid-gap: 10px;
+  margin-bottom:100px;
+}
 
 select {
      background-color:black;
@@ -62,12 +67,12 @@ input{
 }
 
 
-.result {
+/*.result {
   justify-content: center;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, 31%);
-}
+
+}*/
 
 .result>* {
 
@@ -118,4 +123,24 @@ a{
     -ms-transition: height .15s ease-in-out;
     -o-transition: height .15s ease-in-out;
     transition: height .15s ease-in-out;
+}
+
+
+@media (max-width: 1499px) and (min-width: 1190px){
+.result {
+  grid-template-columns: repeat(auto-fill, 32%);
+}
+}
+
+@media (max-width: 1189px) and (min-width: 650px){
+.result {
+  grid-template-columns: repeat(auto-fill, 40%);
+}
+}
+
+
+@media (max-width: 649px){
+.result {
+  grid-template-columns: repeat(auto-fill, 80%);
+}
 }
