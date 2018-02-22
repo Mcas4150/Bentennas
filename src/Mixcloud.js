@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './shows.css';
 import './App.css';
 
 class Mixcloud extends Component{
@@ -16,7 +17,10 @@ constructor(props) {
       genre: '',
       list: '',
       limit: 20,
+      playerURL: 'https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/',
+      iframe: 'https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'
     };
+    this.changeTrack = this.changeTrack.bind(this);
   }
 
   onChange = (event) => {
@@ -29,9 +33,26 @@ constructor(props) {
     this.setState({ limit: event.target.value});
   }
 
-   handleSubmit = (event) => {
-    event.preventDefault();
-    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/?limit=${this.state.limit}`;
+  changeTrack = () => {
+    this.setState({ playerURL: this.show.url});
+  }
+
+  //  handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/?limit=${this.state.limit}`;
+  //   fetch(url)
+  //     .then(response => response.json())
+  //     .then(data => this.setState({
+  //       term: '',
+  //       name: data.name,
+  //       shows: data.data,
+  //      }))
+  //     .catch(e => console.log('error', e));
+  // }
+
+   componentDidMount() {
+    // event.preventDefault();
+    const url = `https://api.mixcloud.com/NTSRadio/cloudcasts/?limit=${this.state.limit}`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
@@ -50,12 +71,9 @@ constructor(props) {
 
   render() {
     return (
-      <div className="App">
-        <div className="Title">
-        Search Mixcloud
-        </div>
+      <div className="middle">
         <form onSubmit={this.handleSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
+         {/* <input value={this.state.term} onChange={this.onChange} />*/}
           <select value={this.state.limit} onChange={this.setLimit}>
             <option value="20">20</option>
             <option value="40">40</option>
@@ -77,19 +95,21 @@ constructor(props) {
             <div  className="show">
 
 
-              <a href={show.url}>
+              <a href={show.url} >
               <img src={show.pictures.large}/>
-              <br/>
-                {show.name}
-
               </a>
+              <br/>
+                <div className="showname" >
+                {show.name}
+                </div>
+
            {/*   {show.user.name}*/}
             </div>
           );
         })}
 
         <div className="mixcloud-player">
-          <iframe id="mixcloud-content" width="100%" height="60" frameborder="0" src="https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/okonkole-y-trompa-8th-november-2017/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1">
+          <iframe id="mixcloud-content" width="100%" height="60" frameborder="0" src={this.state.iframe}>
           </iframe>
         </div>
         </div>

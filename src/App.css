@@ -1,13 +1,16 @@
-.App {
+.middle {
   text-align: center;
-
+  margin-top: 73px;
 }
 
 body{
   background-color: black;
+ /* font-family: Univers-Condensed,Arial,sans-serif;*/
 }
 
-
+a:hover{
+  color: grey;
+}
 
 button {
     border-color: white;
@@ -45,10 +48,19 @@ select {
 
 input{
   background-color:black;
-  border: 2px solid white;
+  border:none;
+  border-bottom: 1px solid white;
   margin: 5px;
   color: white;
 }
+
+:focus {
+    outline:none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 5px;
+}
+
 
 .result {
   justify-content: center;
@@ -62,6 +74,12 @@ input{
 }
 
 a{
+  color: white;
+  text-decoration-line: none;
+  font-size: .85em;
+}
+
+.showname{
   color: white;
   text-decoration-line: none;
   font-size: 1em;

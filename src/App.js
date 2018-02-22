@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Youtube from "./Youtube";
 import Mixcloud from "./Mixcloud";
+import Header from './header/header';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         {/*<div className="Title">
         Welcome to Memeland
         </div>
