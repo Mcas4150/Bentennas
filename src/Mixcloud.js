@@ -75,6 +75,11 @@ constructor(props) {
             </div>
           );
         })}
+
+        <div className="mixcloud-player">
+          <iframe id="mixcloud-content" width="100%" height="60" frameborder="0" src="https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/okonkole-y-trompa-8th-november-2017/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1">
+          </iframe>
+        </div>
         </div>
       </div>
     );
