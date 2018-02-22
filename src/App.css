@@ -18,6 +18,15 @@ button {
 }
 
 
+
+select {
+     background-color:black;
+  border: 2px solid white;
+  margin: 5px;
+  color: white;
+  /*  border-image: initial;*/
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

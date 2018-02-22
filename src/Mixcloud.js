@@ -15,6 +15,7 @@ constructor(props) {
       tags: [],
       genre: '',
       list: '',
+      limit: 20,
     };
   }
 
@@ -24,9 +25,13 @@ constructor(props) {
 
 
 
+  setLimit = (event) => {
+    this.setState({ limit: event.target.value});
+  }
+
    handleSubmit = (event) => {
     event.preventDefault();
-    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/?limit=40`;
+    const url = `https://api.mixcloud.com/${this.state.term}/cloudcasts/?limit=${this.state.limit}`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
@@ -51,6 +56,13 @@ constructor(props) {
         </div>
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
+          <select value={this.state.limit} onChange={this.setLimit}>
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+          </select>
+{/*
+          <input value={this.state.limit} onChange={this.setLimit} />*/}
           <button>Search</button>
         </form>
         <div className="result">
