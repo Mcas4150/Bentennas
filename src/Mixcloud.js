@@ -83,6 +83,19 @@ constructor(props) {
           <input value={this.state.limit} onChange={this.setLimit} />*/}
           <button>Search</button>
         </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="result">
 
 
