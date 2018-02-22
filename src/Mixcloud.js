@@ -51,7 +51,7 @@ constructor(props) {
         </div>
         <form onSubmit={this.handleSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
-          <button>Search User</button>
+          <button>Search</button>
         </form>
         <div className="result">
 

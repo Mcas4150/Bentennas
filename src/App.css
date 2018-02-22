@@ -7,6 +7,17 @@ body{
   background-color: black;
 }
 
+
+
+button {
+    border-color: white;
+    border-style: solid;
+    border-width: 2.5px;
+    padding: 1px;
+    margin: 0;
+}
+
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -47,7 +58,7 @@ a{
 }
 
 .show{
-  border: 2px solid white;
+  border: 1px solid grey;
   padding: 5px;
   background-color: black
 }
