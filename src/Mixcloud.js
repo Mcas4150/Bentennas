@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FooterPlayer from "./FooterPlayer";
+import Paginate  from "./Paginate";
 import './shows.css';
 import './App.css';
 
@@ -22,14 +23,15 @@ constructor(props) {
       iframe: 'https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'
     };
     this.changeTrack = this.changeTrack.bind(this);
+    this.setLimit = this.setLimit.bind(this);
   }
 
   onChange = (event) => {
     this.setState({ term: event.target.value });
   }
 
-  setLimit = (event) => {
-    this.setState({ limit: event.target.value});
+  setLimit = (newLimit) => {
+    this.setState({ limit: newLimit});
   }
 
   changeTrack = (nowPlaying) => {
@@ -56,16 +58,8 @@ constructor(props) {
   render() {
     return (
       <div className="middle">
-        <form onSubmit={this.handleSubmit}>
-          <select value={this.state.limit} onChange={this.setLimit}>
-            <option value="20">20</option>
-            <option value="40">40</option>
-            <option value="60">60</option>
-            <option value="80">80</option>
-            <option value="100">100</option>
-          </select>
-          <button>Search</button>
-        </form>
+        <Paginate limit={this.state.limit} onChange={this.setLimit}/>
+
 
         <div className="result">
           {this.state.shows.map(function(show) {
