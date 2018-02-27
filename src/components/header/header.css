@@ -13,12 +13,32 @@
 
 .header-container {
     position: relative;
-    padding: 9px 0 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0;
     height: 42px;
-    font-size: .85em;
+    font-size: 1.5rem;
     letter-spacing: .06em;
 }
+
+.btn-outer{
+    width: 85px;
+      border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+/*    margin: 0 9px 18px 9px;*/
+     padding: 3px 6px 2px 6px;
+}
+
+.btn-outer + .btn-outer{
+  margin: 0 9px 18px 9px;
+}
+
+.btn-outer:hover{
+  border: 1px solid;
+}
+s
 
 #header-top {
     padding: 1px 0 10px 43px;

@@ -3,6 +3,7 @@ import FooterPlayer from "../footer-player/FooterPlayer";
 import Paginate  from "../../Paginate";
 import './shows.css';
 import '../app/App.css';
+import '../../globalstyle.css';
 
 const ShowsList = ({ shows }) =>
    <div className="result">
@@ -72,8 +73,8 @@ constructor(props) {
 
  render() {
     return (
-      <div className="middle">
-        <Paginate limit={this.state.limit} onChange={this.setLimit}/>
+      <div className="middle wrap">
+        {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
         <ShowsList shows={this.state.shows}/>
         <FooterPlayer iframe={this.state.iframe}/>
       </div>

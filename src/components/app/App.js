@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import '../../globalstyle.css';
 import Shows from "../shows/shows";
 import Header from '../header/header';
 
