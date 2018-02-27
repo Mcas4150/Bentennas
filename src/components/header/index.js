@@ -11,11 +11,18 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-container wrap">
-          <Link className="nav-item btn-outer" to={"/mixes"}>MIXES</Link>
-          <Link className="nav-item btn-outer" to={"/videos"}>VIDEOS</Link>
-          <Link className="nav-item btn-outer" to={"/editorial"}>EDITORIAL</Link>
-          <Link className="nav-item btn-outer" to={"https://ntslive.tictail.com/"} target="_blank">SHOP</Link>
-          <Link className="nav-item btn-outer" to={"/about"}>ABOUT</Link>
+        {/*Mobile Only*/}
+          <div className="mobile">
+            <Link className="nav-item btn-outer" to={"/mixes"}>MENU</Link>
+          </div>
+        {/*Desktopy*/}
+          <div className="desktop">
+            <Link className="nav-item btn-outer " to={"/mixes"}>MIXES</Link>
+            <Link className="nav-item btn-outer" to={"/videos"}>VIDEOS</Link>
+            <Link className="nav-item btn-outer" to={"/editorial"}>EDITORIAL</Link>
+            <Link className="nav-item btn-outer" to={"https://ntslive.tictail.com/"} target="_blank">SHOP</Link>
+            <Link className="nav-item btn-outer" to={"/about"}>ABOUT</Link>
+          </div>
         </div>
       </div>
 
