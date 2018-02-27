@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import '../../globalstyle.css';
-import Shows from "../shows/shows";
-import Header from '../header/header';
+import Main from "../main/index";
+import Header from '../header/index';
 
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header/>
-        <Shows/>
+        <Main/>
       </div>
     );
   }

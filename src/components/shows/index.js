@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FooterPlayer from "../footer-player/FooterPlayer";
+import FooterPlayer from "../footer-player/index";
 import Paginate  from "../../Paginate";
 import './shows.css';
 import '../app/App.css';
@@ -82,7 +82,7 @@ constructor(props) {
 
  render() {
     return (
-      <div className="middle wrap">
+      <div className="middle">
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
         <ShowsList shows={this.state.shows}/>
         <FooterPlayer iframe={this.state.iframe}/>
