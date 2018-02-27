@@ -13,10 +13,9 @@
 
 .header-container {
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
     margin: 0;
-    height: 42px;
     font-size: 1.5rem;
     letter-spacing: .06em;
 }
@@ -38,17 +37,7 @@
 .btn-outer:hover{
   border: 1px solid;
 }
-s
 
-#header-top {
-    padding: 1px 0 10px 43px;
-    height: 32px;
-/*    -webkit-transition: height .1s linear;
-    -moz-transition: height .1s linear;
-    -ms-transition: height .1s linear;
-    -o-transition: height .1s linear;
-    transition: height .1s linear;*/
-}
 
 nav {
     display: inline-block;
@@ -68,38 +57,3 @@ a {
     color: #fff;
 }
 
-#logo {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 26px;
-    height: 26px;
-    display: block;
-    background-repeat: no-repeat;
-    background-image: url(/Ups.jpg);
-    background-size: 26px 26px;
-    -webkit-transition: opacity .1s linear;
-    -moz-transition: opacity .1s linear;
-    -ms-transition: opacity .1s linear;
-    -o-transition: opacity .1s linear;
-    transition: opacity .1s linear;
-}
-
-#live-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 42px;
-    height: 31px;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    padding-left: 85px;
-    z-index: 9000;
-    background-color: #000;
-    color: #fff;
-    -webkit-transition: top .1s linear,height .14s linear;
-    -moz-transition: top .1s linear,height .14s linear;
-    -ms-transition: top .1s linear,height .14s linear;
-    -o-transition: top .1s linear,height .14s linear;
-    transition: top .1s linear,height .14s linear;
-}
