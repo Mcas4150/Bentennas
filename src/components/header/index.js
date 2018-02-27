@@ -3,7 +3,33 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import '../../globalstyle.css';
 
+
+
+
+  function menuTransition () {
+     let el = document.querySelector("div.menu-btn");
+        let link = document.querySelector('div.hide');
+
+        if (el) {
+          el.className = "menu-btn-full";
+          link.className = "visible";
+        } else {
+          el = document.querySelector("div.menu-btn-full");
+          el.className = "menu-btn";
+          link = document.querySelector('div.visible');
+          link.className = "hide";
+        }
+
+        return el, link;
+    };
+
+
+
+
+
 class Header extends Component {
+
+
 
 
 
@@ -13,7 +39,10 @@ class Header extends Component {
         <div className="header-container wrap">
         {/*Mobile Only*/}
           <div className="mobile">
-            <Link className="nav-item btn-outer" to={"/mixes"}>MENU</Link>
+            <div className="nav-item btn-outer menu-btn" onClick={menuTransition}>MENU</div>
+              <div className="hide">
+                <div id="fullscreen-menu"></div>
+              </div>
           </div>
         {/*Desktopy*/}
           <div className="desktop">

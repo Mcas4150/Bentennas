@@ -7,7 +7,8 @@
     z-index: 9000;
     color: #fff;
     background-color: #000;
-    border-bottom: 1px solid #fff;
+  /*  border-bottom: 1px solid #fff;*/
+
   }
 
 
@@ -21,7 +22,7 @@
 }
 
 .btn-outer{
-    width: 85px;
+    width: 4rem;
       border-top: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: 1px solid;
@@ -39,17 +40,12 @@
 }
 
 
-nav {
-    display: inline-block;
-    float: left;
-    clear: both;
-    margin-top: -1px;
-    height: 157%;
-    font-size: .95em;
-}
+
 
 .nav-item {
     padding-right: 8px;
+        font-size: .85em;
+        cursor: pointer;
 }
 
 
@@ -57,3 +53,33 @@ a {
     color: #fff;
 }
 
+
+.block{
+  display:block;
+}
+
+.menu-btn{
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: height;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+}
+
+.fullscreen-menu{
+  position: fixed;
+    top: 54px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    z-index: 21;
+    height: 80vh;
+      -webkit-transition-property: height;
+    -webkit-transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: height;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+}
