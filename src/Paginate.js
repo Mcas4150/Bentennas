@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './components/app/App.css';
 
 
 class Paginate extends Component {

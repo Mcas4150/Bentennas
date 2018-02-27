@@ -20,8 +20,8 @@ class Header extends Component {
             </nav>
           </div>
         </div>
-        <div id="live-header">
-        </div>
+       {/* <div id="live-header">
+        </div>*/}
       </div>
 
    );

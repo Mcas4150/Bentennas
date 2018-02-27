@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Mixcloud from "./Mixcloud";
-import Header from './header/header';
+import Shows from "../shows/shows";
+import Header from '../header/header';
 
 class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <Header/>
-        <Mixcloud/>
+        <Shows/>
       </div>
     );
   }

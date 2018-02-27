@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import FooterPlayer from "./FooterPlayer";
-import Paginate  from "./Paginate";
+import FooterPlayer from "../footer-player/FooterPlayer";
+import Paginate  from "../../Paginate";
 import './shows.css';
-import './App.css';
+import '../app/App.css';
 
 class Mixcloud extends Component{
 constructor(props) {
@@ -17,26 +17,25 @@ constructor(props) {
       shows: [],
       tags: [],
       genre: '',
-      list: '',
-      limit: 100,
+      limit: 40,
       playerURL: 'https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/',
       iframe: 'https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'
     };
-    this.changeTrack = this.changeTrack.bind(this);
+    // this.changeTrack = this.changeTrack.bind(this);
     this.setLimit = this.setLimit.bind(this);
-  }
-
-  onChange = (event) => {
-    this.setState({ term: event.target.value });
   }
 
   setLimit = (newLimit) => {
     this.setState({ limit: newLimit});
-  }
+  };
 
-  changeTrack = (nowPlaying) => {
-    this.setState({ playerURL: nowPlaying});
-  }
+//   changeTrack = (newURL) => {
+//       this.setState({ playerURL: newUrl });
+//
+//       //   this.setState({ iframe: 'https://www.mixcloud.com/widget/iframe/?feed=' + {newUrl} + '&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'});
+// }
+
+
 
    componentDidMount() {
     const url = `https://api.mixcloud.com/NTSRadio/cloudcasts/?limit=${this.state.limit}`;
@@ -51,23 +50,19 @@ constructor(props) {
   }
 
 
-// list =  this.setObject.keys(tags).forEach(function(key) {
-//   console.log('Key : ' + key + ', Value : ' + tags[key])
-// })
-
-  render() {
+ render() {
     return (
       <div className="middle">
         <Paginate limit={this.state.limit} onChange={this.setLimit}/>
-
-
         <div className="result">
           {this.state.shows.map(function(show) {
             return (
-              <div  className="show">
+              <div className="show">
                 <a href={show.url} >
-                  <img src={show.pictures.large}/>
+                    <img src={show.pictures.large} />
                 </a>
+
+                  {/*<img src={show.pictures.large} value={show.url} onClick={this.changeTrack}/>*/}
                 <br/>
                   <div className="showname" >
                   {show.name}
@@ -75,13 +70,11 @@ constructor(props) {
               </div>
             );
           })}
-
           <FooterPlayer iframe={this.state.iframe}/>
         </div>
       </div>
     );
   }
-
 }
 
 

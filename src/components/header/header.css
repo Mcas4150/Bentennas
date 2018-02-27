@@ -4,19 +4,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 73px;
     z-index: 9000;
-    font-size: .95em;
-    font-weight: 100;
-    line-height: 1;
     color: #fff;
     background-color: #000;
     border-bottom: 1px solid #fff;
-    -webkit-transition: height .1s linear;
-    -moz-transition: height .1s linear;
-    -ms-transition: height .1s linear;
-    -o-transition: height .1s linear;
-    transition: height .1s linear;
   }
 
 
@@ -32,11 +23,11 @@
 #header-top {
     padding: 1px 0 10px 43px;
     height: 32px;
-    -webkit-transition: height .1s linear;
+/*    -webkit-transition: height .1s linear;
     -moz-transition: height .1s linear;
     -ms-transition: height .1s linear;
     -o-transition: height .1s linear;
-    transition: height .1s linear;
+    transition: height .1s linear;*/
 }
 
 nav {

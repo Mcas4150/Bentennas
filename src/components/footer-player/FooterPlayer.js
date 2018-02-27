@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './shows.css';
+import '../shows/shows.css';
 
 
 class FooterPlayer extends Component {
