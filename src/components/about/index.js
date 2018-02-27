@@ -6,7 +6,7 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-        <img src="https://i.imgur.com/2294yxd.jpg"/>
+       {/* <img src="https://i.imgur.com/2294yxd.jpg"/>*/}
       </div>
     );
   }
