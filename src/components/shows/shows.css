@@ -12,10 +12,16 @@
   color: white;
   text-decoration-line: none;
   font-size: 1em;
+  padding: 5px;
+}
+
+.showname:hover{
+  color:black;
+  background-color: white;
 }
 
 .show:hover{
-  background-color: blue;
+ /* background-color: blue;*/
   color: black;
   .showname {
     color:black;
@@ -26,10 +32,19 @@
 
 .show{
   border: .5px solid white;
+}
+
+
+
+
+.image{
   padding: 5px;
   background-color: grey;
 }
 
+.image:hover{
+  background-color: blue;
+}
 
 
 .mixcloud-player {
@@ -50,7 +65,7 @@
 .result {
   justify-content: center;
   display: grid;
-  grid-gap: 15px;
+  grid-gap: 1.5rem;
 
 }
 

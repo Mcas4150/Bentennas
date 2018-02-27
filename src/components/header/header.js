@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-container wrap">
-             <a className="nav-item btn-outer" href="/events">EVENTS
+             <a className="nav-item btn-outer" href="/events">MIXES
              </a>
               <a className="nav-item btn-outer" href="/videos">
               VIDEOS</a>

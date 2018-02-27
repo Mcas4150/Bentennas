@@ -5,15 +5,23 @@ import './shows.css';
 import '../app/App.css';
 import '../../globalstyle.css';
 
+
+
+// const colors = ['#ff0000', '#0000ff', '#00ff00']
+// let random_color = colors[Math.floor(Math.random() * colors.length)];
+// document.getElementById('image').style.backgroundcolor = random_color;
+
+
 const ShowsList = ({ shows }) =>
    <div className="result">
           {shows.map(function(show) {
             return (
               <div className="show">
-                <a href={show.url} >
-                    <img src={show.pictures.large}/>
-                </a>
-                <br/>
+                <div className="image" id="image">
+                  <a href={show.url} >
+                      <img src={show.pictures.large}/>
+                  </a>
+                </div>
                   <div className="showname" key={show.url} onClick={() => this.changeTrack(show.url)}>
                   {show.name}
                   </div>
@@ -21,6 +29,7 @@ const ShowsList = ({ shows }) =>
             );
           })}
         </div>
+
 
 
 class Mixcloud extends Component{
