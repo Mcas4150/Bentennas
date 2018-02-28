@@ -6,21 +6,28 @@ import '../../globalstyle.css';
 
 
 
-const VideoContainer = ({videoUrl}) =>
+const VideoContainer = (props) =>
   <div className="video-container">
+     <div className="description">
+      {props.title}
+      {props.description}
+
+    </div>
     <div className="video-player">
-      <ReactPlayer url={videoUrl}  width='100%'
+      <ReactPlayer url={props.videoUrl}  width='100%'
           height='100%' playing controls="true"/>
     {/*  <div className="video-controls">
       </div>*/}
+
     </div>
+
   </div>
 
 
 
-const VideosList = ({ videos }) =>
+const VideosList = (props) =>
    <div className="video-grid">
-          {videos.map(function(video) {
+          {props.videos.map(function(video) {
             return (
               <div className="show">
                 <div className="video-image">
@@ -47,9 +54,9 @@ class Videos extends Component {
     this.state = {
       term: '',
       videoID:'',
-      title: "",
+      title: "Sun Ra and his Arkestra",
       thumbnail: '',
-      description: '',
+      description: 'Space is the Place',
       date: "",
       url: '',
       videos: [],
@@ -78,7 +85,7 @@ class Videos extends Component {
   render() {
     return (
       <div className="middle">
-          <VideoContainer videoUrl={this.state.videoURL}/>
+          <VideoContainer videoUrl={this.state.videoURL} description={this.state.description} title={this.state.title}/>
 {/*          <VideoContainer/>*/}
           <VideosList videos={this.state.videos}/>
       </div>

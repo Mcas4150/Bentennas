@@ -44,6 +44,11 @@
   border: 1px solid white;
 }
 
+
+.description{
+  color: white;
+}
+
 @media (min-width: 1500px){
 .video-grid {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
