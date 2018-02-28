@@ -58,6 +58,26 @@
 
 
 
+.search{
+  float:right;
+}
+
+input{
+  background-color:black;
+  border:none;
+  border-bottom: 1px solid white;
+  margin: 5px;
+  color: white;
+}
+
+:focus {
+    outline:none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 5px;
+}
+
+
 
 .nav-item {
     padding-right: 8px;

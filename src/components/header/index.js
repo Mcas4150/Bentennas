@@ -6,6 +6,18 @@ import '../../globalstyle.css';
 
 
 
+
+
+const Search = () =>
+  <div className="search">
+    <input type="text">
+    </input>
+  </div>
+
+
+
+
+
   function menuTransition () {
      let el = document.querySelector("div.hidden");
      let border = document.querySelector("div.btn-outer");
@@ -38,6 +50,7 @@ class Header extends Component {
         {/*Mobile Only*/}
           <div className="mobile">
             <div className="nav-item btn-outer menu-btn" onClick={menuTransition}>MENU</div>
+              <Search/>
               <div className="hidden">
                 <div className="fullscreen-menu">
                   <Link className="item" to={"/mixes"}>MIXES</Link>
@@ -63,6 +76,7 @@ class Header extends Component {
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"/events"}>EVENTS</NavLink>
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"https://ntslive.tictail.com/"} target="_blank">SHOP</NavLink>
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"/about"}>ABOUT</NavLink>
+            <Search/>
           </div>
         {/*Mobile*/}
         </div>
