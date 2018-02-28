@@ -6,10 +6,10 @@ import '../../globalstyle.css';
 
 
 
-const VideoContainer = () =>
+const VideoContainer = ({videoUrl}) =>
   <div className="video-container">
     <div className="video-player">
-      <ReactPlayer url='https://www.youtube.com/watch?v=sl3VFDf1JhA'  width='100%'
+      <ReactPlayer url={videoUrl}  width='100%'
           height='100%' playing controls="true"/>
     {/*  <div className="video-controls">
       </div>*/}
@@ -53,6 +53,7 @@ class Videos extends Component {
       date: "",
       url: '',
       videos: [],
+      videoURL: "https://www.youtube.com/watch?v=sl3VFDf1JhA",
       limit: 40,
     };
   }
@@ -77,9 +78,8 @@ class Videos extends Component {
   render() {
     return (
       <div className="middle">
-
-          <VideoContainer/>
-
+          <VideoContainer videoUrl={this.state.videoURL}/>
+{/*          <VideoContainer/>*/}
           <VideosList videos={this.state.videos}/>
       </div>
     );
