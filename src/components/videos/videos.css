@@ -8,6 +8,16 @@
 }
 
 
+.video-image{
+  padding: 2px;
+  background-color: grey;
+}
+
+.video-image:hover{
+  background-color: rebeccapurple;
+}
+
+
 @media (min-width: 1500px){
 .video-grid {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

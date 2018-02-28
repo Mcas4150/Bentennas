@@ -10,7 +10,7 @@ const VideosList = ({ videos }) =>
           {videos.map(function(video) {
             return (
               <div className="show">
-                <div className="image" id="image">
+                <div className="video-image">
                   <a href="" >
                       <img src={video.snippet.thumbnails.high.url}/>
                   </a>

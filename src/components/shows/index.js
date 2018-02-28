@@ -11,7 +11,7 @@ const ShowsList = ({ shows }) =>
           {shows.map(function(show) {
             return (
               <div className="show">
-                <div className="image" id="image">
+                <div className="image">
                   <a href={show.url} >
                       <img src={show.pictures.large}/>
                   </a>
