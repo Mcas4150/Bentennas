@@ -5,7 +5,21 @@ import '../../globalstyle.css';
 
 
 
-
+const Social = () =>
+  <div className="social">
+   {/* <a href="">
+      <img id="facebook" class="social-logo" src="https://www.facebook.com/ntsradiolive/"/>
+    </a>
+    <a href="https://twitter.com/NTSlive">
+      <img id="twitter" src=""/>
+    </a>
+    <a href="">
+      <img id="instagram" src=""/>
+    </a>*/}
+    <a href="https://www.youtube.com/user/NTSLIVEUK">
+      <img id="youtube" src="http://moziru.com/images/youtube-clipart-png-black-11.png"/>
+    </a>
+  </div>
 
 
 const Search = () =>
@@ -83,6 +97,7 @@ class Header extends Component {
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"/about"}>ABOUT</NavLink>
             <div className="right-header">
               <Search/>
+              <Social/>
               <Chat/>
             </div>
           </div>
