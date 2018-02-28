@@ -6,7 +6,10 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-       {/* <img src="https://i.imgur.com/2294yxd.jpg"/>*/}
+        <div className="center">
+          <h1>This site was created to share some of my favorite mixes</h1>
+         {/* <p id="credit">created by Mike Cassidy 2018</p>*/}
+        </div>
       </div>
     );
   }

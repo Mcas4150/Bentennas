@@ -1,42 +1,12 @@
 .middle {
   text-align: center;
-  margin-top: 73px;
+  margin-top: 4rem;
 }
 
 body{
   background-color: black;
  /* font-family: Univers-Condensed,Arial,sans-serif;*/
 }
-
-/*.app{
-  padding-left: 1.7778rem;
-  padding-right: 1.7778rem;
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*a:hover{
-  color: grey;
-}*/
 
 button {
     border-color: white;
@@ -88,14 +58,6 @@ input{
     outline-style: none;
     outline-width: 5px;
 }
-
-
-/*.result {
-  justify-content: center;
-  display: grid;
-  grid-gap: 10px;
-
-}*/
 
 
 

@@ -1,3 +1,12 @@
+body{
+  background-color: black;
+ /* font-family: Univers-Condensed,Arial,sans-serif;*/
+}
+
+.font1{
+  font-size: 1rem;
+}
+
 .wrap{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -8,6 +17,32 @@
   display:none;
 }
 
+/* width */
+::-webkit-scrollbar {
+    margin-top: 8px;
+    width: 10px;
+/*    margin-bottom: 100px;*/
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: blue;
+}
+
+
+
+
+
 
 @media (max-width: 649px){
   .mobile {
@@ -17,3 +52,4 @@
     display:none;
   }
 }
+
