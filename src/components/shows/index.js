@@ -79,7 +79,6 @@ constructor(props) {
       <div className="middle">
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
         <ShowsList shows={this.state.shows}/>
-        <FooterPlayer iframe={this.state.iframe}/>
       </div>
     );
   }

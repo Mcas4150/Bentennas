@@ -26,7 +26,7 @@
 
 .showname:hover{
   color:black;
-  background-color: white;
+  background-color: rgba(255,255,255,.85);
   cursor:pointer;
 }
 

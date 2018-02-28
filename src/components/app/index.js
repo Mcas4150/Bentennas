@@ -3,6 +3,7 @@ import './App.css';
 import '../../globalstyle.css';
 import Main from "../main/index";
 import Header from '../header/index';
+import FooterPlayer from "../footer-player/index";
 
 class App extends Component {
 
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="app">
         <Header/>
         <Main/>
+        <FooterPlayer/>
       </div>
     );
   }
