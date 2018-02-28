@@ -13,6 +13,11 @@
   text-decoration-line: none;
   font-size: 1em;
   padding: 5px;
+      -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 /*        border-left: 1px solid transparent;
     border-top: 1px solid transparent;
     border-bottom: 5px solid white;
@@ -22,6 +27,7 @@
 .showname:hover{
   color:black;
   background-color: white;
+  cursor:pointer;
 }
 
 .show:hover{
@@ -48,6 +54,11 @@
 .image{
   padding: 2px;
   background-color: grey;
+    -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 
 .image:hover{
