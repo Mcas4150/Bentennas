@@ -6,19 +6,33 @@ import '../../globalstyle.css';
 
 
 
+const VideoContainer = () =>
+  <div className="video-container">
+    <div className="video-player">
+      <ReactPlayer url='https://www.youtube.com/watch?v=sl3VFDf1JhA'  width='100%'
+          height='100%' playing controls="true"/>
+    {/*  <div className="video-controls">
+      </div>*/}
+    </div>
+  </div>
+
+
+
 const VideosList = ({ videos }) =>
    <div className="video-grid">
           {videos.map(function(video) {
             return (
               <div className="show">
                 <div className="video-image">
-                  <a href="" >
+                  <a href="" key={video.id.videoID} >
                       <img src={video.snippet.thumbnails.high.url}/>
                   </a>
                 </div>
                   <div className="showname">
                   {video.snippet.title}
+                  {video.snippet.publishedAt})
                     {/*<p>{video.snippet.description}</p>*/}
+
                   </div>
               </div>
             );
@@ -36,6 +50,7 @@ class Videos extends Component {
       title: "",
       thumbnail: '',
       description: '',
+      date: "",
       url: '',
       videos: [],
       limit: 40,
@@ -62,7 +77,9 @@ class Videos extends Component {
   render() {
     return (
       <div className="middle">
-          <ReactPlayer url='https://www.youtube.com/watch?v=sl3VFDf1JhA' playing/>
+
+          <VideoContainer/>
+
           <VideosList videos={this.state.videos}/>
       </div>
     );
