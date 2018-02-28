@@ -13,6 +13,10 @@
   text-decoration-line: none;
   font-size: 1em;
   padding: 5px;
+/*        border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 5px solid white;
+/*    border-right: 5px solid white;*/
 }
 
 .showname:hover{
@@ -31,14 +35,18 @@
 
 
 .show{
-  border: .5px solid white;
+/*      border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;*/
+        border-bottom: 1px solid white;
 }
 
 
 
 
 .image{
-  padding: 5px;
+  padding: 2px;
   background-color: grey;
 }
 
@@ -80,17 +88,23 @@ img{
 
 @media (min-width: 1500px){
 .result {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 }
 
 @media (max-width: 1499px) and (min-width: 1190px){
 .result {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+}
+
+@media (max-width: 1189px) and (min-width: 900px){
+.result {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 }
 
-@media (max-width: 1189px) and (min-width: 650px){
+@media (max-width: 899px) and (min-width: 650px){
 .result {
   grid-template-columns: 1fr 1fr 1fr;
 }
