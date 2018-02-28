@@ -15,7 +15,10 @@ const Search = () =>
   </div>
 
 
-
+const Chat = () =>
+  <div className="chat">
+    <img id="chatbox" src="https://d30y9cdsu7xlg0.cloudfront.net/png/465588-200.png"/>
+  </div>
 
 
   function menuTransition () {
@@ -50,7 +53,9 @@ class Header extends Component {
         {/*Mobile Only*/}
           <div className="mobile">
             <div className="nav-item btn-outer menu-btn" onClick={menuTransition}>MENU</div>
+            <div className="right-header">
               <Search/>
+              </div>
               <div className="hidden">
                 <div className="fullscreen-menu">
                   <Link className="item" to={"/mixes"}>MIXES</Link>
@@ -76,7 +81,10 @@ class Header extends Component {
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"/events"}>EVENTS</NavLink>
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"https://ntslive.tictail.com/"} target="_blank">SHOP</NavLink>
             <NavLink className="nav-item btn-outer" activeClassName="btn-outer-top" to={"/about"}>ABOUT</NavLink>
-            <Search/>
+            <div className="right-header">
+              <Search/>
+              <Chat/>
+            </div>
           </div>
         {/*Mobile*/}
         </div>
