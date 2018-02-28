@@ -5,8 +5,9 @@ import './shows.css';
 import '../app/App.css';
 import '../../globalstyle.css';
 
+
 const ShowsList = ({ shows }) =>
-   <div className="result">
+   <div className="grid">
           {shows.map(function(show) {
             return (
               <div className="show">
@@ -22,6 +23,7 @@ const ShowsList = ({ shows }) =>
             );
           })}
         </div>
+
 
 
 class Mixcloud extends Component{
