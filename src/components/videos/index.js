@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactPlayer from 'react-player';
 import "./videos.css";
 import "../shows/shows.css";
 import '../../globalstyle.css';
@@ -61,6 +62,7 @@ class Videos extends Component {
   render() {
     return (
       <div className="middle">
+          <ReactPlayer url='https://www.youtube.com/watch?v=sl3VFDf1JhA' playing/>
           <VideosList videos={this.state.videos}/>
       </div>
     );
