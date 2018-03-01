@@ -6,6 +6,7 @@ import '../../globalstyle.css';
 
 
 
+
 const VideoContainer = (props) =>
   <div className="video-container">
      <div className="description">
@@ -14,7 +15,7 @@ const VideoContainer = (props) =>
 
     </div>
     <div className="video-player">
-      <ReactPlayer url={props.videoUrl}  width='100%'
+      <ReactPlayer url={"https://www.youtube.com/watch?v=" + props.playerID} width='100%'
           height='100%' playing controls="true"/>
     {/*  <div className="video-controls">
       </div>*/}
@@ -31,13 +32,15 @@ const VideosList = (props) =>
             return (
               <div className="show">
                 <div className="video-image">
-                  <a href="" key={video.id.videoID} >
+                  <a href="/" key={video.id.videoId} >
                       <img src={video.snippet.thumbnails.high.url}/>
                   </a>
                 </div>
                   <div className="showname">
                   {video.snippet.title}
-                  {video.snippet.publishedAt})
+                  {video.snippet.publishedAt}
+                  <br/>
+                  {video.id.videoId}
                     {/*<p>{video.snippet.description}</p>*/}
 
                   </div>
@@ -53,18 +56,17 @@ class Videos extends Component {
     super(props);
     this.state = {
       term: '',
-      videoID:'',
+      playerID:'sl3VFDf1JhA',
       title: "Sun Ra and his Arkestra",
       thumbnail: '',
       description: 'Space is the Place',
       date: "",
       url: '',
       videos: [],
-      videoURL: "https://www.youtube.com/watch?v=sl3VFDf1JhA",
       limit: 40,
     };
+    this.videoHandler = this.videoHandler.bind(this);
   }
-
 
 
    componentDidMount() {
@@ -79,13 +81,18 @@ class Videos extends Component {
   }
 
 
+  videoHandler(videoID){
+    this.setState({
+
+    });
+  }
 
 
 
   render() {
     return (
       <div className="middle">
-          <VideoContainer videoUrl={this.state.videoURL} description={this.state.description} title={this.state.title}/>
+          <VideoContainer playerID={this.state.playerID} description={this.state.description} title={this.state.title}/>
 {/*          <VideoContainer/>*/}
           <VideosList videos={this.state.videos}/>
       </div>
