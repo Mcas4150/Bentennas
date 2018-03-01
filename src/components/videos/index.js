@@ -36,7 +36,7 @@ const VideosList = (props) =>
                       <img src={video.snippet.thumbnails.high.url}/>
                   </a>
                 </div>
-                  <div className="showname">
+                  <div className="showname" key={video.id.videoId} onClick={() => this.props.action}>
                   {video.snippet.title}
                   {video.snippet.publishedAt}
                   <br/>
@@ -83,7 +83,7 @@ class Videos extends Component {
 
   videoHandler(videoID){
     this.setState({
-
+      playerID: videoID
     });
   }
 
@@ -93,8 +93,11 @@ class Videos extends Component {
     return (
       <div className="middle">
           <VideoContainer playerID={this.state.playerID} description={this.state.description} title={this.state.title}/>
-{/*          <VideoContainer/>*/}
-          <VideosList videos={this.state.videos}/>
+             <VideosList videos={this.state.videos} action={this.videoHandler}/>
+
+
+
+
       </div>
     );
   }
