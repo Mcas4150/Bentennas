@@ -40,6 +40,7 @@ constructor(props) {
       tags: [],
       genre: '',
       limit: 40,
+      isLoading: false,
       playerURL: 'https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/',
       iframe: 'https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/play-it-as-it-lathes-w-zach-cowie-23rd-february-2018/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'
     };
@@ -59,6 +60,7 @@ constructor(props) {
 
 
    componentDidMount() {
+    this.setState({ isLoading: true});
     const url = `https://api.mixcloud.com/NTSRadio/cloudcasts/?limit=${this.state.limit}`;
     fetch(url)
       .then(response => response.json())
@@ -66,6 +68,7 @@ constructor(props) {
         term: '',
         name: data.name,
         shows: data.data,
+        isLoading: false,
        }))
       .catch(e => console.log('error', e));
   }
@@ -75,6 +78,14 @@ constructor(props) {
 
 
  render() {
+    const {isLoading} = this.state;
+    if (isLoading){
+      return  (
+       <div className="middle">
+          <p className="loading">Loading...</p>
+      </div>
+      );
+    }
     return (
       <div className="middle">
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}

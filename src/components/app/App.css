@@ -3,10 +3,7 @@
   margin-top: 4rem;
 }
 
-body{
-  background-color: black;
- /* font-family: Univers-Condensed,Arial,sans-serif;*/
-}
+
 
 button {
     border-color: white;
@@ -44,20 +41,6 @@ select {
   font-size: 1.5em;
 }
 
-input{
-  background-color:black;
-  border:none;
-  border-bottom: 1px solid white;
-  margin: 5px;
-  color: white;
-}
-
-:focus {
-    outline:none;
-    outline-color: none;
-    outline-style: none;
-    outline-width: 5px;
-}
 
 
 

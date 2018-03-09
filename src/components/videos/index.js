@@ -32,7 +32,7 @@ const VideosList = (props) =>
             return (
               <div className="show">
                 <div className="video-image">
-                  <a href="/" key={video.id.videoId} >
+                  <a href="/" >
                       <img src={video.snippet.thumbnails.high.url}/>
                   </a>
                 </div>
