@@ -9,11 +9,7 @@ import '../../globalstyle.css';
 
 const VideoContainer = (props) =>
   <div className="video-container">
-     <div className="description">
-      {props.title}
-      {props.description}
 
-    </div>
     <div className="video-player">
       <ReactPlayer url={"https://www.youtube.com/watch?v=" + props.playerID} width='100%'
           height='100%' playing controls="true"/>
@@ -21,7 +17,11 @@ const VideoContainer = (props) =>
       </div>*/}
 
     </div>
+    <div className="description">
+      {props.title}
+      {props.description}
 
+    </div>
   </div>
 
 
