@@ -55,10 +55,14 @@ body{
 
 @media (max-width: 899px){
   .mobile {
-    display:block;
+    display: flex;
+    justify-content: space-between;
   }
   .desktop {
     display:none;
+  }
+  .btn-outer{
+    margin: 0 18px 0px 0;
   }
 }
 

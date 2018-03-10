@@ -37,11 +37,15 @@ const Chat = () =>
 
   function menuTransition () {
      let el = document.querySelector("div.hidden");
+     let search = document.querySelector('div.search');
      let border = document.querySelector("div.btn-outer");
         if (el) {
           el.className = "visible";
+          search.className = "search-hidden";
           border.className = "nav-item btn-outer-top menu-btn";
         } else {
+          search = document.querySelector('div.search-hidden');
+          search.className = "search";
           el = document.querySelector("div.visible");
           el.className = "hidden";
           border = document.querySelector("div.btn-outer-top");
