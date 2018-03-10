@@ -1,5 +1,7 @@
 body{
-  background-color: black;
+  background-color: #1d1e1f;
+
+
   overflow-x: hidden;
  /* font-family: Univers-Condensed,Arial,sans-serif;*/
 }
@@ -33,12 +35,12 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: black;
+    background: #262728;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: white;
+    background: #d6d6d6;
 }
 
 /* Handle on hover */

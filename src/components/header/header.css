@@ -5,8 +5,8 @@
     left: 0;
     width: 100%;
     z-index: 9000;
-    color: #fff;
-    background-color: #000;
+    color: #d6d6d6;
+    background-color: #262728;
   /*  border-bottom: 1px solid #fff;*/
 
   }
@@ -89,11 +89,11 @@
 }
 
 input{
-  background-color:black;
+  background-color:#262728;
   border:none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #d6d6d6;
   margin: 5px;
-  color: white;
+  color: #d6d6d6;
 }
 
 :focus {
@@ -134,7 +134,7 @@ input{
 
 
 a {
-    color: #fff;
+    color: #d6d6d6;
 }
 
 
