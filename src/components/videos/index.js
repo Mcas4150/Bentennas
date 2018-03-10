@@ -64,18 +64,21 @@ class Videos extends Component {
       url: '',
       videos: [],
       limit: 40,
+      isLoading: false,
     };
     this.videoHandler = this.videoHandler.bind(this);
   }
 
 
    componentDidMount() {
+    this.setState({ isLoading: true});
     const url = `https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCmqKuYoZCI7D6FQzDv5nKNw&maxResults=25&key=AIzaSyBQ8FSEJZuoR2AFyoXJ1EyFCspH89Ckxws`;
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         term: '',
         videos: data.items,
+        isLoading: false,
        }))
       .catch(e => console.log('error', e));
   }
@@ -90,6 +93,14 @@ class Videos extends Component {
 
 
   render() {
+    const {isLoading} = this.state;
+    if (isLoading){
+      return  (
+       <div className="middle">
+          <p className="loading">Loading...</p>
+      </div>
+      );
+    }
     return (
       <div className="middle">
           <VideoContainer playerID={this.state.playerID} description={this.state.description} title={this.state.title}/>

@@ -4,6 +4,7 @@ import Paginate  from "../../Paginate";
 import './shows.css';
 import '../app/App.css';
 import '../../globalstyle.css';
+// import './caroImage';
 
 
 var Carousel = require('nuka-carousel');
@@ -93,13 +94,13 @@ constructor(props) {
       <div className="middle">
         <div className="caro-pad">
           <Carousel wrapAround="true" autoplay="false">
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/f2af85b9-c94f-40fd-827c-5ba7ad40e8c1_1519689600.png"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/0bc2b5e9-c6bf-41f2-baa5-fde9d6ca2adc_1519776000.jpeg"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/335e4c96-ac2c-4e98-b52d-baec833a7547_1519603200.jpeg"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/3c2192b5-30a8-4306-a0e7-a8b3a1642bea_1519862400.jpeg"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/204e797c-224e-4f4a-9d76-2aa45968633f_1520294400.jpeg"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/66985bd8-d880-477d-b840-cf7ef19dde80_1520467200.jpeg"/>
-            <img src="https://media.ntslive.co.uk/resize/1600x1600/368ac02b-3863-4e28-b770-168478e6b46c_1520553600.jpeg"/>
+            <img src="https://i.imgur.com/yww3bTL.png"/>
+            <img src="https://i.imgur.com/9iMnhp9.jpg"/>
+            <img src="https://i.imgur.com/9n9UFI4.jpg"/>
+            <img src="https://i.imgur.com/7k8hVxR.jpg"/>
+            <img src="https://i.imgur.com/iVswLte.jpg"/>
+            <img src="https://i.imgur.com/bCheMw3.jpg"/>
+            <img src="https://i.imgur.com/WYHk2ql.jpg"/>
           </Carousel>
         </div>
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}

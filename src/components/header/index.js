@@ -4,6 +4,10 @@ import './header.css';
 import '../../globalstyle.css';
 
 
+// var client = algoliasearch('X619PX3QEA', '9bc8fb9aa766d6599095a9d1611572dc');
+// var index = client.initIndex('shows');
+
+
 
 const Social = () =>
   <div className="social">
