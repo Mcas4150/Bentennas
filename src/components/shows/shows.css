@@ -86,7 +86,7 @@ img{
   width: 100%;
   object-fit:cover;
   mix-blend-mode: difference;
-  filter: grayscale(100%) brightness(129%);
+  filter: grayscale(5%) brightness(136%) saturate(95%);
 }
 
 
