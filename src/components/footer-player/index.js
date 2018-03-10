@@ -21,8 +21,8 @@ class FooterPlayer extends Component {
   render() {
     return (
         <div className="mixcloud-player">
-        <ReactPlayer url='https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/' width='100%'
-          height='68px' controls="true"/>
+        <ReactPlayer  url='https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/' width='100%'
+          height='0px' controls="true"/>
         </div>
     );
   }
