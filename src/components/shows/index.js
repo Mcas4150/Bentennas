@@ -6,6 +6,9 @@ import '../app/App.css';
 import '../../globalstyle.css';
 
 
+var Carousel = require('nuka-carousel');
+
+
 const ShowsList = ({ shows }) =>
    <div className="grid">
           {shows.map(function(show) {
@@ -74,7 +77,7 @@ constructor(props) {
   }
 
 
-
+  mixins: [Carousel.ControllerMixin]
 
 
  render() {
@@ -88,6 +91,15 @@ constructor(props) {
     }
     return (
       <div className="middle">
+        <div className="caro-pad">
+          <Carousel wrapAround="true" autoplay="false">
+            <img src="https://media.ntslive.co.uk/resize/1600x1600/f2af85b9-c94f-40fd-827c-5ba7ad40e8c1_1519689600.png"/>
+            <img src="https://media.ntslive.co.uk/resize/1600x1600/b2398efe-8c8d-47b8-af32-cdf6e9496b5c_1520294400.jpeg"/>
+            <img src="https://media.ntslive.co.uk/resize/1600x1600/f6fbe947-44e2-430c-9e49-6b4c1ab0282d_1519257600.jpeg"/>
+            <img src="https://media.ntslive.co.uk/resize/1600x1600/66985bd8-d880-477d-b840-cf7ef19dde80_1520467200.jpeg"/>
+            <img src="https://media.ntslive.co.uk/resize/1600x1600/368ac02b-3863-4e28-b770-168478e6b46c_1520553600.jpeg"/>
+          </Carousel>
+        </div>
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
         <ShowsList shows={this.state.shows}/>
       </div>

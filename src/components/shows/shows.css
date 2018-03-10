@@ -33,6 +33,7 @@
 
 
 .loading{
+  margin-top: 50vh;
   color: #d6d6d6;
 }
 
@@ -71,7 +72,13 @@
   background-color: blue;
 }
 
-
+.slider-slide > img {
+    width: 80%;
+    display: block;
+}
+.slider {
+  width:80%;
+}
 
 
 .grid {
@@ -79,6 +86,12 @@
   display: grid;
   grid-gap: 1.5rem;
 
+}
+
+
+.caro-pad{
+  margin: 1.5rem 0;
+  filter: grayscale(50%) saturate(50%);
 }
 
 
