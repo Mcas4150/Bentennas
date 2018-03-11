@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import "./videos.css";
 import "../shows/shows.css";
 import '../../globalstyle.css';
+import LoadingIndicator from '../loading-indicator/loading-indicator';
 
 
 
@@ -97,7 +98,7 @@ class Videos extends Component {
     if (isLoading){
       return  (
        <div className="middle">
-          <p className="loading">Loading...</p>
+          <LoadingIndicator/>
       </div>
       );
     }

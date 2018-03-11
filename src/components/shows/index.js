@@ -5,9 +5,18 @@ import './shows.css';
 import '../app/App.css';
 import '../../globalstyle.css';
 // import './caroImage';
-
+import algoliasearch from 'algoliasearch';
+import {InstantSearch} from 'react-instantsearch/dom';
+import LoadingIndicator from '../loading-indicator/loading-indicator';
 
 var Carousel = require('nuka-carousel');
+
+
+var client = algoliasearch('X619PX3QEA', '9bc8fb9aa766d6599095a9d1611572dc');
+var index = client.initIndex('shows');
+
+
+
 
 
 const ShowsList = ({ shows }) =>
@@ -66,15 +75,17 @@ constructor(props) {
    componentDidMount() {
     this.setState({ isLoading: true});
     const url = `https://api.mixcloud.com/NTSRadio/cloudcasts/?limit=${this.state.limit}`;
-    fetch(url)
+    const showsindex = fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         term: '',
         name: data.name,
         shows: data.data,
         isLoading: false,
+
        }))
       .catch(e => console.log('error', e));
+// index.addObjects(showsindex);
   }
 
 
@@ -86,7 +97,7 @@ constructor(props) {
     if (isLoading){
       return  (
        <div className="middle">
-          <p className="loading">Loading...</p>
+          <LoadingIndicator/>
       </div>
       );
     }
@@ -97,10 +108,8 @@ constructor(props) {
             <img src="https://i.imgur.com/yww3bTL.png"/>
             <img src="https://i.imgur.com/9iMnhp9.jpg"/>
             <img src="https://i.imgur.com/9n9UFI4.jpg"/>
-            <img src="https://i.imgur.com/7k8hVxR.jpg"/>
             <img src="https://i.imgur.com/iVswLte.jpg"/>
             <img src="https://i.imgur.com/bCheMw3.jpg"/>
-            <img src="https://i.imgur.com/WYHk2ql.jpg"/>
           </Carousel>
         </div>
         {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
