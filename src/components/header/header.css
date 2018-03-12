@@ -180,6 +180,11 @@ a {
   font-size: 1rem;
 }
 
+
+.item:hover{
+  color: #7d7e7f;
+}
+
 .fullscreen.menu .item .arrow-inner.right {
     left: auto;
     right: 9px;
