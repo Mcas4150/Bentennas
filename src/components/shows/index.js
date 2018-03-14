@@ -31,13 +31,19 @@ const ShowsList = ({ shows }) =>
                 </div>
                   <div className="showname" key={show.url} onClick={() => this.changeTrack(show.url)}>
                   {show.name}
+                  {/*{show.name.split(" - ")}
+                  {show.tags.map(function(tag){
+                    return (
+                      <div className='tagbox'>
+                        <div className="tag">{tag.name}</div>
+                      </div>
+                      );
+                  })}*/}
                   </div>
               </div>
             );
           })}
         </div>
-
-
 
 class Mixcloud extends Component{
 constructor(props) {

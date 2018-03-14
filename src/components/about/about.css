@@ -24,6 +24,7 @@ filter: grayscale(50%) saturate(50%);
 
 h1{
   font-weight: 300;
+  font-family: helvetica;
 }
 
 #credit{
