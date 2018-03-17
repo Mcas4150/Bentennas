@@ -5,6 +5,7 @@ import './shows.css';
 import '../app/App.css';
 import '../../globalstyle.css';
 // import './caroImage';
+import ReactPlayer from 'react-player';
 import algoliasearch from 'algoliasearch';
 import {InstantSearch} from 'react-instantsearch/dom';
 import LoadingIndicator from '../loading-indicator/loading-indicator';
@@ -29,7 +30,7 @@ const ShowsList = ({ shows }) =>
                       <img src={show.pictures.large}/>
                   </a>
                 </div>
-                  <div className="showname" key={show.url} onClick={() => this.changeTrack(show.url)}>
+                  <div className="showname" ref={show.url} onClick={() => this.changeTrack(show.url)}>
                   {show.name}
                   {/*{show.name.split(" - ")}
                   {show.tags.map(function(tag){
@@ -60,6 +61,7 @@ constructor(props) {
       genre: '',
       limit: 40,
       isLoading: false,
+      showURL: "https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/",
       playerURL: 'https://www.mixcloud.com/NTSRadio/nosedrip-9th-january-2017/',
       iframe: 'https://www.mixcloud.com/widget/iframe/?feed=https://www.mixcloud.com/NTSRadio/play-it-as-it-lathes-w-zach-cowie-23rd-february-2018/&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1'
     };
@@ -71,9 +73,9 @@ constructor(props) {
     this.setState({ limit: newLimit});
   };
 
-  changeTrack = (url) => {
-      const newUrl = url;
-      this.setState({ iframe: 'https://www.mixcloud.com/widget/iframe/?feed='.concat(newUrl, '&mini=1&embed_uuid=2b6ffc54-26d3-46fe-a17f-246587139b40&replace=0&hide_cover=1&light=1&embed_type=widget_standard&hide_tracklist=1')});
+  changeTrack (url){
+      let newUrl = url;
+      this.setState({ showURL: newUrl});
   };
 
 
@@ -88,7 +90,6 @@ constructor(props) {
         name: data.name,
         shows: data.data,
         isLoading: false,
-
        }))
       .catch(e => console.log('error', e));
 // index.addObjects(showsindex);
@@ -108,18 +109,52 @@ constructor(props) {
       );
     }
     return (
-      <div className="middle">
-        <div className="caro-pad">
-          <Carousel wrapAround="true" autoplay="false">
-            <img src="https://i.imgur.com/yww3bTL.png"/>
-            <img src="https://i.imgur.com/9iMnhp9.jpg"/>
-            <img src="https://i.imgur.com/9n9UFI4.jpg"/>
-            <img src="https://i.imgur.com/iVswLte.jpg"/>
-            <img src="https://i.imgur.com/bCheMw3.jpg"/>
-          </Carousel>
+      <div className="total">
+        <div className="middle">
+          <div className="caro-pad">
+            <Carousel wrapAround="true" autoplay="false">
+              <img src="https://i.imgur.com/yww3bTL.png"/>
+              <img src="https://i.imgur.com/9iMnhp9.jpg"/>
+              <img src="https://i.imgur.com/9n9UFI4.jpg"/>
+              <img src="https://i.imgur.com/iVswLte.jpg"/>
+              <img src="https://i.imgur.com/bCheMw3.jpg"/>
+            </Carousel>
+          </div>
+          {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
+
+
+          {/*<ShowsList shows={this.state.shows}/>*/}
+           <div className="grid">
+            {this.state.shows.map(function(show) {
+              return (
+                <div key={show.name} className="show">
+                  <div className="image">
+                    <a href={show.url} >
+                        <img src={show.pictures.large}/>
+                    </a>
+                  </div>
+                    <div className="showname" ref={show.url} onClick={() => this.changeTrack(show.url)}>
+                   {/*<div className="showname" ref={showlink} onClick={ this.changeTrack.bind(this, show.url )}>*/}
+
+                       {show.name}
+                    {/*{show.name.split(" - ")}
+                    {show.tags.map(function(tag){
+                      return (
+                        <div className='tagbox'>
+                          <div className="tag">{tag.name}</div>
+                        </div>
+                        );
+                    })}*/}
+                    </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        {/*<Paginate limit={this.state.limit} onChange={this.setLimit}/>*/}
-        <ShowsList shows={this.state.shows}/>
+        <div className="mixcloud-player">
+          <ReactPlayer  url={this.state.showURL} width='100%'
+            height='60px' controls="true"/>
+        </div>
       </div>
     );
   }

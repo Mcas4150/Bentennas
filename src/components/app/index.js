@@ -12,7 +12,7 @@ class App extends Component {
       <div className="app">
         <Header/>
         <Main/>
-        <FooterPlayer/>
+        {/*<FooterPlayer/>*/}
       </div>
     );
   }
