@@ -6,7 +6,6 @@ import '../../globalstyle.css';
 
 
 
-
 const Social = () =>
   <div className="social">
    {/* <a href="">
