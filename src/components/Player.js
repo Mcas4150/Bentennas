@@ -54,6 +54,18 @@ class Player extends Component {
           <p className="current-show">{this.returnShowData()}</p>
         </div>
         <div className="right-side-player">
+          <div className="socials-wrapper">
+            <a href="#" target="blank">
+              <i className="social-instagram fab fa-instagram" />
+            </a>
+            <a href="#" target="blank">
+              <i className="social-facebook fab fa-facebook-square" />
+            </a>
+            <a href="#" target="blank">
+              <i class="social-chat fas fa-comment-alt" />
+            </a>
+          </div>
+
           <Volumebutton
             volumeClicked={this.volumeClicked}
             volume={this.props.volume}

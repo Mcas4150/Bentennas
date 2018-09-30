@@ -74,6 +74,7 @@ class CurrentShowDetail extends Component {
             <h3 className="currentshow-show-name">
               <span>{this.returnShowName()}</span>
             </h3>
+
             <div
               className="currentshow-playbutton-container"
               onClick={this.playClicked}
@@ -85,9 +86,9 @@ class CurrentShowDetail extends Component {
               />
             </div>
 
-            <p className="currentshow-show-description">
+            <div className="currentshow-show-description">
               <span>{this.returnShowDescription()}</span>
-            </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,14 @@
 import React, { Component } from "react";
+import { bounce } from "react-animations";
+import Radium, { StyleRoot } from "radium";
 import "./Schedule.css";
+
+const styles = {
+  bounce: {
+    animation: "x 1s",
+    animationName: Radium.keyframes(bounce, "bounce")
+  }
+};
 
 class Schedule extends Component {
   constructor(props) {
@@ -13,12 +22,14 @@ class Schedule extends Component {
       let selectedDay = this.props.selectedDay[1];
       let showsForThatDay = selectedDay.map((show, index) => {
         return (
-          <tr key={index} className="show-listing">
-            {this.showTimeParser(show)}
-            <td className="show-name" key={index}>
-              {this.showNameParser(show)}
-            </td>
-          </tr>
+          <StyleRoot>
+            <tr key={index} className="show-listing" style={styles.bounce}>
+              {this.showTimeParser(show)}
+              <td className="show-name" key={index}>
+                {this.showNameParser(show)}
+              </td>
+            </tr>
+          </StyleRoot>
         );
       });
       return showsForThatDay;

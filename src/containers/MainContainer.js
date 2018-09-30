@@ -4,7 +4,7 @@ import Schedule from "../components/Schedule";
 import Player from "../components/Player";
 import NavBar from "../components/NavBar";
 import CurrentShowDetail from "../components/CurrentShowDetail";
-import LogoHead from "../components/LogoHead";
+// import LogoHead from "../components/LogoHead";
 import "./MainContainer.css";
 import _ from "lodash";
 
@@ -280,9 +280,9 @@ class Main extends Component {
           />
         </audio>
 
-        <div className="logo-head-container">
+        {/* <div className="logo-head-container">
           <LogoHead />
-        </div>
+        </div> */}
 
         <nav className="nav-container">
           <NavBar />
