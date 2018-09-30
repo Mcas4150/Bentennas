@@ -1,3 +1,3 @@
 <h1>Bentennas</h1>
 
-<p>Bentennas is an online repository broadcasting audio, visual, and written media </p>
+<p>Bentennas is an Independent community radio for Boston. Built in React.js and Airtime Pro</p>
