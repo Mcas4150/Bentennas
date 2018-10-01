@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { bounce } from "react-animations";
+import { fadeIn } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import "./Schedule.css";
 
 const styles = {
-  bounce: {
+  fadeIn: {
     animation: "x 1s",
-    animationName: Radium.keyframes(bounce, "bounce")
+    animationName: Radium.keyframes(fadeIn, "fadeIn")
   }
 };
 
@@ -23,7 +23,7 @@ class Schedule extends Component {
       let showsForThatDay = selectedDay.map((show, index) => {
         return (
           <StyleRoot>
-            <tr key={index} className="show-listing" style={styles.bounce}>
+            <tr key={index} className="show-listing" style={styles.fadeIn}>
               {this.showTimeParser(show)}
               <td className="show-name" key={index}>
                 {this.showNameParser(show)}

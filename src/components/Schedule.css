@@ -69,9 +69,6 @@
 }
 
 @media only screen and (max-width: 1150px) {
-  .days-header {
-    justify-content: end;
-  }
 }
 
 @media only screen and (max-width: 800px) {

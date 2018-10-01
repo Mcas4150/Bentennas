@@ -67,7 +67,7 @@
   padding: 4px;
   background-color: rgba(72, 67, 73, 0.8);
   line-height: 24px;
-  display: block;
+  display: inline-flex;
 }
 
 @media only screen and (max-width: 1160px) {
@@ -93,7 +93,7 @@
   .currentshow-container {
     width: 85vw;
     margin: 0px 10px 0px 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .currentshow-show-name {

@@ -14,7 +14,17 @@ class Player extends Component {
     this.volumeClicked = this.volumeClicked.bind(this);
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    let currentTrack = null;
+    if (this.props.currentShow !== null) {
+      let showData = this.props.currentShow;
+      currentTrack = showData.current.name;
+      // let parsedForInvertedCommas = currentShowName.replace(/&#039;/g, "'");
+      // let parsedForAmpersands = parsedForInvertedCommas.replace(/&amp;/g, "&");
+      // return parsedForAmpersands;
+    }
+    return currentTrack;
+  }
 
   returnShowData() {
     let currentShowName = null;
@@ -33,9 +43,13 @@ class Player extends Component {
     if (this.props.currentShow !== null) {
       let showData = this.props.currentShow;
       currentTrack = showData.current.name;
-      // let parsedForInvertedCommas = currentShowName.replace(/&#039;/g, "'");
-      // let parsedForAmpersands = parsedForInvertedCommas.replace(/&amp;/g, "&");
-      // return parsedForAmpersands;
+      let parsedForInvertedCommas = currentTrack.replace(/&#039;/g, "'");
+      let parsedForQuotationMarks = parsedForInvertedCommas.replace(
+        /&quot;/g,
+        "'"
+      );
+      let parsedForAmpersands = parsedForQuotationMarks.replace(/&amp;/g, "&");
+      return parsedForAmpersands;
     }
     return currentTrack;
   }
@@ -66,7 +80,14 @@ class Player extends Component {
           <p className="current-show">{this.returnShowData()}</p>
         </div>
         <div className="middle-player">
-          <p className="current-track">{this.returnCurrentTrack()}</p>
+          <marquee className="current-track" behavior="scroll" direction="left">
+            {" "}
+            {this.returnCurrentTrack()}
+          </marquee>
+
+          {/* <p className="current-track scroll-left"> */}
+
+          {/* </p> */}
         </div>
         <div className="right-side-player">
           <div className="socials-wrapper">

@@ -12,7 +12,7 @@ const NavBar = props => {
           alt="ehfm arched logo"
         />
       </div>
-      <div className="nav-middle">BENTENNAS</div>
+      <div className="nav-middle">OBLIQUE</div>
       <div className="nav-right">
         <a href="#">About</a>
       </div>

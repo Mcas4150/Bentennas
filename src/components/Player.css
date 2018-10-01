@@ -8,9 +8,12 @@
 .custom-player {
   background-color: var(--ehfmcolor);
   padding: 10px 20px 10px 20px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-areas: "left-side-player middle-player right-side-player";
+  /* display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center; */
 }
 
 .onair-container {
@@ -79,13 +82,21 @@
 }
 
 .left-side-player {
+  grid-area: "left-side-player";
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
+.middle-player {
+  grid-area: "middle-player";
+  display: flex;
+  align-self: center;
+}
+
 .right-side-player {
+  grid-area: "right-side-player";
   display: inline-flex;
   margin: 0px 0px 0px auto;
   align-items: center;
@@ -155,7 +166,7 @@ i:hover {
 
 @media only screen and (max-width: 768px) {
   .player-container {
-    top: 114px;
+    top: 47px;
   }
 }
 
@@ -164,16 +175,31 @@ i:hover {
     margin-left: 10px;
     padding-right: 5px;
   }
+  .custom-player {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-areas: "left-side-player right-side-player" "middle-player middle-player"; */
+    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
+  }
 }
 
 @media only screen and (max-width: 425px) {
   .player-container {
-    top: 122px;
+    top: 47px;
+  }
+  .custom-player {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
   }
 }
 
 @media only screen and (max-width: 400px) {
   .current-show {
     font-size: 14px;
+  }
+  .custom-player {
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-areas: "left-side-player right-side-player" "middle-player middle-player"; */
+    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
   }
 }

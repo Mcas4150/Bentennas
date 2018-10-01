@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Schedule from "../components/Schedule";
 import Player from "../components/Player";
 import NavBar from "../components/NavBar";
+// import Footer from "../components/Footer";
 import CurrentShowDetail from "../components/CurrentShowDetail";
 // import LogoHead from "../components/LogoHead";
 import "./MainContainer.css";
@@ -13,6 +14,7 @@ class Main extends Component {
     super(props);
     this.state = {
       showSchedule: [],
+      currentTrack: null,
       currentDate: null,
       currentDay: null,
       currentShow: null,
@@ -79,7 +81,7 @@ class Main extends Component {
   }
 
   currentShowApiCall() {
-    fetch("http://bentennas.airtime.pro/api/live-info")
+    fetch("https://bentennas.airtime.pro/api/live-info")
       .then(response => response.json())
       .then(data =>
         this.setState({ currentShow: data }, function() {
@@ -90,7 +92,7 @@ class Main extends Component {
   }
 
   scheduleApiCall() {
-    fetch("http://bentennas.airtime.pro/api/week-info")
+    fetch("https://bentennas.airtime.pro/api/week-info")
       .then(response => response.json())
       .then(this.fetchDate())
       .then(data =>
@@ -290,6 +292,7 @@ class Main extends Component {
         <div className="player-container">
           <Player
             currentShow={this.state.currentShow}
+            currentTrack={this.state.currentTrack}
             playing={this.state.playing}
             volume={this.state.volume}
             handlePlayPauseClicked={this.handlePlayPauseClicked}

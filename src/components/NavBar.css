@@ -6,7 +6,8 @@
 }
 
 .nav-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -39,6 +40,10 @@
 }
 
 .nav-middle {
+  color: var(--ehfmcolor);
+  display: flex;
+  justify-content: center;
+  align-self: center;
   font-family: "Notable";
   font-size: 30px;
 }
@@ -50,6 +55,7 @@
 }
 
 .nav-logo {
+  margin-left: -20px;
   width: 80px;
   height: 60px;
   /* margin-right: 20px; */
@@ -102,6 +108,10 @@ i:hover {
 
   .nav-left {
     height: 31px;
+  }
+
+  .nav-middle {
+    font-size: 24px;
   }
 }
 

@@ -13,6 +13,13 @@
   /* color: var(--ehfmcolor) */
 }
 
+.nav-container {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  z-index: 100;
+}
+
 @media only screen and (max-width: 800px) {
   .body-container {
     flex-direction: column;
@@ -21,8 +28,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .body-container{
-      margin-top: 160px;
+  .body-container {
+    margin-top: 110px;
   }
 }
 
