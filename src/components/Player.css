@@ -1,7 +1,7 @@
 .player-container {
   position: fixed;
   top: 86px;
-  width: 100vw;
+  width: 100%;
   z-index: 100;
 }
 
@@ -82,21 +82,21 @@
 }
 
 .left-side-player {
-  grid-area: "left-side-player";
+  grid-area: left-side-player;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .middle-player {
-  grid-area: "middle-player";
+  grid-area: middle-player;
   display: flex;
   align-self: center;
 }
 
 .right-side-player {
-  grid-area: "right-side-player";
+  grid-area: right-side-player;
   display: inline-flex;
   margin: 0px 0px 0px auto;
   align-items: center;
@@ -141,7 +141,7 @@ i:hover {
   color: var(--playerwhite);
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: 40px;
+
   letter-spacing: 1px;
 }
 
@@ -168,6 +168,11 @@ i:hover {
   .player-container {
     top: 47px;
   }
+  .custom-player {
+    grid-template-columns: 1.5fr 1fr;
+
+    grid-template-areas: "left-side-player right-side-player" "middle-player middle-player";
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -175,10 +180,10 @@ i:hover {
     margin-left: 10px;
     padding-right: 5px;
   }
-  .custom-player {
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-areas: "left-side-player right-side-player" "middle-player middle-player"; */
-    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
+
+  .current-track {
+    padding-top: 5px;
+    margin-left: 0px;
   }
 }
 
@@ -186,20 +191,10 @@ i:hover {
   .player-container {
     top: 47px;
   }
-  .custom-player {
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
-    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
-  }
 }
 
 @media only screen and (max-width: 400px) {
   .current-show {
     font-size: 14px;
-  }
-  .custom-player {
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-areas: "left-side-player right-side-player" "middle-player middle-player"; */
-    grid-template-areas: "left-side-player middle-player" "right-side-player middle-player";
   }
 }

@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 14px;
+  font-size: 19px;
 }
 
 .days-header-item {
@@ -77,6 +77,9 @@
     padding-bottom: 20px;
   }
 
+  .show-schedule {
+    margin-top: 20px;
+  }
   .schedule-container {
     width: 85vw;
     margin: 0px 10px 0px 10px;
@@ -85,6 +88,12 @@
   .show-time {
     width: 120px;
     font-size: 14px;
+  }
+  .days-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 19px;
   }
 
   @media only screen and (max-width: 320px) {

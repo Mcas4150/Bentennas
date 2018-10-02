@@ -5,17 +5,13 @@ import "./NavBar.css";
 const NavBar = props => {
   return (
     <div className="nav-bar">
-      <div className="nav-left">
-        <img
-          className="nav-logo"
-          src="bentennaslogo.png"
-          alt="ehfm arched logo"
-        />
+      <div className="nav-left nav-link">Live</div>
+      <div className="nav-stripe" />
+      <div className="nav-middle">
+        <div>NOTION</div>
       </div>
-      <div className="nav-middle">OBLIQUE</div>
-      <div className="nav-right">
-        <a href="#">About</a>
-      </div>
+      <div className="nav-stripe" />
+      <div className="nav-right nav-link">About</div>
     </div>
   );
 };

@@ -75,6 +75,9 @@ class CurrentShowDetail extends Component {
               <span>{this.returnShowName()}</span>
             </h3>
 
+            <div className="currentshow-show-description">
+              <span>{this.returnShowDescription()}</span>
+            </div>
             <div
               className="currentshow-playbutton-container"
               onClick={this.playClicked}
@@ -84,10 +87,6 @@ class CurrentShowDetail extends Component {
                 playingTrueFalse={this.props.playing}
                 playClicked={this.playClicked}
               />
-            </div>
-
-            <div className="currentshow-show-description">
-              <span>{this.returnShowDescription()}</span>
             </div>
           </div>
         </div>

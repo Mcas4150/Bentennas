@@ -5,6 +5,7 @@ import Player from "../components/Player";
 import NavBar from "../components/NavBar";
 // import Footer from "../components/Footer";
 import CurrentShowDetail from "../components/CurrentShowDetail";
+import QuoteContainer from "../components/QuoteContainer";
 // import LogoHead from "../components/LogoHead";
 import "./MainContainer.css";
 import _ from "lodash";
@@ -52,7 +53,7 @@ class Main extends Component {
       function() {
         this.currentShowApiCall();
       }.bind(this),
-      1000 * 60 * 60
+      1000 * 60
     );
   }
 
@@ -282,10 +283,6 @@ class Main extends Component {
           />
         </audio>
 
-        {/* <div className="logo-head-container">
-          <LogoHead />
-        </div> */}
-
         <nav className="nav-container">
           <NavBar />
         </nav>
@@ -310,6 +307,8 @@ class Main extends Component {
             daysToDisplay={this.state.displayedDays}
             selectedDay={this.state.selectedDay}
           />
+          {/* <br />
+          <QuoteContainer /> */}
         </div>
       </React.Fragment>
     );
